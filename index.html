@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
+        <title>Bienvenido</title>
+        <script type="text/javascript">
+
+             var canvas = document.getElementById("canvas");
+  var ctx = canvas.getContext("2d");
+  /*
+var img= new Image();
+img.src="img/dr1.gif";
+img.onload = function(){
+    ctx.drawImage(img,0,0);
+}*/
+  ctx.rotate(Math.random() * 2 * Math.PI);
+  ctx.fillStyle = "rgb(200,0,0)";
+  ctx.fillRect (10, 10, 55, 50);
+
+  ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+  ctx.fillRect (30, 30, 55, 50);
+  ///////////////////////////////////////////////background: url('img/fondo1.gif');
+   //document.body.style.background = "url(" + canvas.toDataURL() + ")";
+   //document.body.style.background = "url('img/fondo1.gif')";
+   
+        </script>
+    </head>
+    <body style="background: url('img/fondo1.gif') no-repeat;background-size:100% 100%;">
+       <div id="main" >
+           <div id="GameArea">
+               <h1>Bienvenido</h1>
+               <img src="img/dr1.gif" style="float:left;margin-left:20%;max-width:200px;margin-bottom:-2000px;">
+               <canvas width="300" height="300" id="canvas">
+                   
+               </canvas>
+<div class="btn-group" style="float:right;">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+    Retos <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="games/getbanana/index.html">Banana</a></li>
+    <li><a href="games/action/index.html">World</a></li>
+    <li><a href="games/shooting/index.html">Shooting</a></li>
+    <li class="divider"></li>
+    <li><a href="#">...</a></li>
+  </ul>
+</div>
+                        
+                
+                
+           </div>
+       </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
