@@ -1,0 +1,196 @@
+/**
+Author: Alf Magne Kalleland
+Copyright (c) 2015, Cellar Labs AS
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+ */
+
+.sudokuActivCell{
+    background-color:#ff8a00;
+}
+
+.sudokuBoard{
+    background-color:#fff;
+}
+
+.sudoku-button-shadow{
+    background-color:#000000;
+}
+.sudoku-button{
+    cursor:pointer;
+    font-family:arial;
+    text-align:center;
+    position:absolute;
+    background-color:#669900;
+    color:#FFF;
+
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+}
+
+.sudoku-button-quicknotes{
+    background-color:#0099cc;
+}
+
+div.sudoku-button-erase{
+    background-color:#b6db49;
+}
+div.sudoku-button-pressed{
+    background-color:#ff8a00;
+}
+.sudoku-button-erase-over{
+    background-color:#b6db49;
+}
+
+.sudoku-button-default-over{
+    background-color:#6da000;
+}
+.sudoku-button-quicknotes-over{
+    background-color:#00ace5;
+}
+
+.sudoku-button-active{
+    background-color:#ff8a00;
+}
+.sudoku-button-active-over{
+    background-color:#e57a00;
+}
+
+.sudoku-button-text-finished{
+    color:#e2f0b6;
+}
+
+.sudoku-board{
+    position:relative;
+}
+
+.sudoku-square-number{
+    position:absolute;
+    text-align:center;
+    font-family:arial;
+    cursor:pointer;
+
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
+}
+
+.sudoku-square-locked{
+    color:#000;
+}
+.sudoku-square-open{
+    color:#039;
+}
+.sudoku-square-frame{
+    position:absolute;
+    border: 0 #000 solid;
+}
+.sudoku-square-highlight{
+    background-color:#e57a00;
+}
+.sudoku-line{
+    background-color:#000;
+}
+
+.sudoku-board-frame{
+    position:absolute;
+    border-color:#000;
+}
+
+.sudoku-board-grid-color-one{
+    background-color:#FFF;
+}
+.sudoku-board-grid-color-two{
+    background-color:#f3f3f3;
+
+}
+
+div.sudoku-square-incorrect{
+    color:#F00;
+}
+
+.sudoku-menu-button{
+    background-image: linear-gradient(to bottom, #8abd00, #669900);
+    background-color:#669900;
+    color:#FFF;
+    font-size:18px;
+    height:40px;
+    cursor:pointer;
+    vertical-align: middle;
+    border-radius:8px;
+    font-weight: normal;
+    display:inline-block;
+    border-color: transparent;
+    margin-right:10px;
+}
+
+button.sudoku-menu-button-light{
+    background-image: linear-gradient(to bottom, #e2f0b6, #f0f8db);
+    background-color:#f0f8db;
+    color: #669900;
+
+}
+
+.sudoku-dialog {
+    background-color: #669900;
+    border-radius: 15px;
+    color: #FFF;
+    z-index:10;
+}
+/* New game dialog CSS */
+.new-game-dialog{
+    padding:20px;
+}
+.sudoku-new-game-heading{
+    font-size:20px;
+    margin-bottom:15px;
+    text-align: center;
+}
+
+.sudoku-new-game-slider{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+.sudoku-difficulty-label{
+    text-align : center;
+    font-size:0.8em;
+}
+
+span.ui-state-default{
+    background: #669900 !important;
+}
+span.ui-corner-all{
+    border-radius:10px !important;
+}
+
+.sudoku-quicknotes-container{
+
+}
+
+.sudoku-quicknotes-cell{
+    float:left;
+    text-align:center;
+}
+
+.sudoku-solved-dialog{
+    z-index:11;
+}

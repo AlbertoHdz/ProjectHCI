@@ -1,0 +1,10 @@
+body{
+	/*background: url('../img/fondo1.gif') no-repeat;
+	/*background-size:100% 100%;*/
+}
+#IMGPrincipal{
+	float:left;
+	margin-left:20%;
+	/*max-width:200px;*/
+	margin-bottom:-2000px;
+}

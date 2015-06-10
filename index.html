@@ -2,9 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
+        <meta name="format-detection" />
         <meta name="msapplication-tap-highlight" content="no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -12,56 +11,128 @@
         <script type="text/javascript" src="js/bootstrap.js"></script>
         <title>Bienvenido</title>
         <script type="text/javascript">
+  /////////////////////////////////////////////
 
-             var canvas = document.getElementById("canvas");
-  var ctx = canvas.getContext("2d");
-  /*
-var img= new Image();
-img.src="img/dr1.gif";
-img.onload = function(){
-    ctx.drawImage(img,0,0);
-}*/
-  ctx.rotate(Math.random() * 2 * Math.PI);
-  ctx.fillStyle = "rgb(200,0,0)";
-  ctx.fillRect (10, 10, 55, 50);
+        var Consejos = ["Hay quien cuida su cuerpo en gimnasio o buena alimentación. No olvides que tu espíritu tambien es importante","Las caricias estimulan el crecimiento de los bebes, en los adultos generan sinapsis en el cerebro. Es un beneficio durante toda la vida","Las Manzanas son muy eficientes para despertarse en las mañanas, mejor que la cafeína","El jugo de limón en ayunas, disuelto en una media taza de agua tibia, contribuye a reducir la acidez del cuerpo","Caminar esta recomendado para todas las personas. Aprovecha los lugares mas visitados y mas concurridos. Gana salud y protección","Regularmente come un plato colorido de vegetales, Mientras más colores, mas fitonutrientes que ayudan al cuerpo tendrás","No duermas con la TV encendida. El ruido y la luz de las imagenes no te permitiran el descanso que necesitas","No te obseciones con lo que dice la báscula, Lo importante es nutrirse de manera adecuada.","Los sueños no son solo para jóvenes. A cualquier edad, el espíritu reclama nuevos desafíos. Buscalos y hazlos tuyos","Si ha pasado mucho tiempo con una postura estática, realice ejercicios básicos para que su circulación sanguinea fluya. Haga breves estiramientos de brazos, levántese, camine. Su cuepo de lo agradecera.","Hay que dormir lo suficiente (7-8 horas). Si duermes mal, aumenta el riesgo de padecer enfermedades y disminuye tu calidad de vida. ¡Dormir bien es Salud!","Las personas más activas cerebralmente están mas protegidas contra el deterioro cognitivo. Mantente activo socialmente, lee libros y periodicos, disfruta la música y pintura, aprende a tocar un instrumento o nuevo idioma. ¡Dale trabajo a tu cerebro!","¡Mojate! El agua es fundamental para el cuerpo, para ayudar a lo que pierde como al realizar deportes. ¡Nunca esperes tener sed para tomar agua, 2 litros al dia y nadar una vez por semana tu cuerpo te lo agradecerá!","Mira al cielo diario, los ojos se resecan mucho por el uso de la computadora o el celular. Para evitar vista cansada y/o miopía toma breves descanso de estos cada 2 o 3 horas, mira al cielo y/o al horizonte,  parpadea con frecuencia.¡Ganarás salud Ocular!","Sonreir atrae las emociones positivas, como la alegría, el entusiasmo, la satisfacción o el orgullo. Sonrie más seguido."];
+        var recent=1;
+            document.body.style.height = screen.height;
+            $("#IMGPrincipal").click(function(){
+                alert("Animación mediante jquery");
+            });
+            $('#canvas').onclick(function() {
+                //event.preventDefault();
+                alert('You Clicked Me');
+            });
+            function MostrarConsejo(){
+                var consejo = $("#ConsejoBody").text();
+                var crn = rand(Consejos.length)+1;
+                //$("#ConsejoBody").text("Insertado desde function");
+                //consejo.innerHTML = "Creado desde function";
+                $("#ConsejoBody").text(Consejos[crn]);
+            }
 
-  ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
-  ctx.fillRect (30, 30, 55, 50);
-  ///////////////////////////////////////////////background: url('img/fondo1.gif');
-   //document.body.style.background = "url(" + canvas.toDataURL() + ")";
-   //document.body.style.background = "url('img/fondo1.gif')";
-   
+            function MostrarAnimacion(){
+                var numrand = rand(30);
+                var str = "<p>Que te parece?</p>"+"<img src='gifs/im"+numrand+".gif'>";
+                 $("#HumorBody").html(str);
+               
+            }
+
+            function rand(num){
+                return Math.floor(Math.random() * num);
+            }
         </script>
     </head>
     <body style="background: url('img/fondo1.gif') no-repeat;background-size:100% 100%;">
        <div id="main" >
            <div id="GameArea">
                <h1>Bienvenido</h1>
-               <img src="img/dr1.gif" style="float:left;margin-left:20%;max-width:200px;margin-bottom:-2000px;">
-               <canvas width="300" height="300" id="canvas">
-                   
-               </canvas>
-<div class="btn-group" style="float:right;">
+              <div id="avatar" onclick="return MostrarAnimacion()">
+                    <img src="img/dr3.gif" style="float:left;margin-left:10%;max-width:450px;margin-bottom:-2000px;" id="IMGPrincipal">
+              </div>
+<div class="btn-group" style="float:left;">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
     Retos <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu">
     <li><a href="games/getbanana/index.html">Banana</a></li>
-    <li><a href="games/action/index.html">World</a></li>
     <li><a href="games/shooting/index.html">Shooting</a></li>
+    <li><a href="games/SudokuJS/index.html">Sudoku</a></li>
     <li class="divider"></li>
     <li><a href="#">...</a></li>
   </ul>
 </div>
+<div class="btn-group" style="float:right;">
+     <button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-sm"  onclick="MostrarConsejo()">
+    <img src="img/cor2.png"> </button>
+    <button type="button" class="btn btn-default" data-toggle="modal" data-target=".bs-example-modal-sm-Hm"  onclick="MostrarAnimacion()">
+     Anime</button>
+  </div>
+    <div class="btn-group" style="float:left;">
+      
+    </div>
+
+<script type="text/javascript">
+   /* var pwidth=screen.width;
+    var pheigh= screen.height;
+    document.write(pwidth+" "+pheigh);*/
+</script>
                         
                 
                 
            </div>
+           <canvas style="height:100%;width:100%;" id="canvas"  onclick="return MostrarAnimacion()">
+                   
+               </canvas>
        </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
         </script>
+        <!--///////////////////////////////////////////////////-->
+     
+<!--//////////////////////////////////////////////////////-->
+
+<div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel">Sabias que....</h4>
+        </div>
+         <div class="modal-body" id="ConsejoBody">
+            ...
+         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Aceptar</button>
+          
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!--//////////////////////////////////////////////////////-->
+
+<div class="modal fade bs-example-modal-sm-Hm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="gridSystemModalLabel">Un poco de Humor....</h4>
+        </div>
+         <div class="modal-body" id="HumorBody">
+            ...
+         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+          
+        </div>
+    </div>
+  </div>
+</div>
+
+
     </body>
 </html>
