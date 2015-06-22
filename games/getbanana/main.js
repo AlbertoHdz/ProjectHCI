@@ -1,10 +1,10 @@
 enchant();
 
+    var puntaje=0;
 window.onload = function() {
     game = new Game(490, 320); //320,320
     game.fps = 24;   //24 velocidad - tiempo
     game.preload(['chara1.gif','icon0.gif','bg.png']);
-    var puntaje=0;
 
     game.onload = function() {
     
@@ -43,7 +43,7 @@ window.onload = function() {
             if(game.rootScene.age > game.fps * 20){
                 game.end(game.score, game.score + " 本のバナナを取りました!");
                 // 結果を表示 (スコア, 結果のテキストの順で)
-                alert(puntaje);
+                alert("Tu puntaje es: "+puntaje);
             }
         });
 		///////////////////////7

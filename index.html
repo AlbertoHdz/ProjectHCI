@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
         <meta name="format-detection" />
         <meta name="msapplication-tap-highlight" content="no" />
+        <link rel="icon" type="image/png" href="icon.png" />
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
@@ -16,6 +17,7 @@
         var Consejos = ["Hay quien cuida su cuerpo en gimnasio o buena alimentación. No olvides que tu espíritu tambien es importante","Las caricias estimulan el crecimiento de los bebes, en los adultos generan sinapsis en el cerebro. Es un beneficio durante toda la vida","Las Manzanas son muy eficientes para despertarse en las mañanas, mejor que la cafeína","El jugo de limón en ayunas, disuelto en una media taza de agua tibia, contribuye a reducir la acidez del cuerpo","Caminar esta recomendado para todas las personas. Aprovecha los lugares mas visitados y mas concurridos. Gana salud y protección","Regularmente come un plato colorido de vegetales, Mientras más colores, mas fitonutrientes que ayudan al cuerpo tendrás","No duermas con la TV encendida. El ruido y la luz de las imagenes no te permitiran el descanso que necesitas","No te obseciones con lo que dice la báscula, Lo importante es nutrirse de manera adecuada.","Los sueños no son solo para jóvenes. A cualquier edad, el espíritu reclama nuevos desafíos. Buscalos y hazlos tuyos","Si ha pasado mucho tiempo con una postura estática, realice ejercicios básicos para que su circulación sanguinea fluya. Haga breves estiramientos de brazos, levántese, camine. Su cuepo de lo agradecera.","Hay que dormir lo suficiente (7-8 horas). Si duermes mal, aumenta el riesgo de padecer enfermedades y disminuye tu calidad de vida. ¡Dormir bien es Salud!","Las personas más activas cerebralmente están mas protegidas contra el deterioro cognitivo. Mantente activo socialmente, lee libros y periodicos, disfruta la música y pintura, aprende a tocar un instrumento o nuevo idioma. ¡Dale trabajo a tu cerebro!","¡Mojate! El agua es fundamental para el cuerpo, para ayudar a lo que pierde como al realizar deportes. ¡Nunca esperes tener sed para tomar agua, 2 litros al dia y nadar una vez por semana tu cuerpo te lo agradecerá!","Mira al cielo diario, los ojos se resecan mucho por el uso de la computadora o el celular. Para evitar vista cansada y/o miopía toma breves descanso de estos cada 2 o 3 horas, mira al cielo y/o al horizonte,  parpadea con frecuencia.¡Ganarás salud Ocular!","Sonreir atrae las emociones positivas, como la alegría, el entusiasmo, la satisfacción o el orgullo. Sonrie más seguido."];
         var recent=1;
             document.body.style.height = screen.height;
+            document.body.style.width = screen.width;
             $("#IMGPrincipal").click(function(){
                 alert("Animación mediante jquery");
             });
@@ -46,7 +48,7 @@
     <body style="background: url('img/fondo1.gif') no-repeat;background-size:100% 100%;">
        <div id="main" >
            <div id="GameArea">
-               <h1>Bienvenido</h1>
+               <img src="gifs/bienverosa.gif" style="width:70%;">
               <div id="avatar" onclick="return MostrarAnimacion()">
                     <img src="img/dr3.gif" style="float:left;margin-left:10%;max-width:450px;margin-bottom:-2000px;" id="IMGPrincipal">
               </div>
@@ -59,7 +61,7 @@
     <li><a href="games/shooting/index.html">Shooting</a></li>
     <li><a href="games/SudokuJS/index.html">Gato</a></li>
     <li class="divider"></li>
-    <li><a href="#">...</a></li>
+    <li><a href="games/aplicacion_ahorcado/index.html">Ahorcado</a></li>
   </ul>
 </div>
 <div class="btn-group" style="float:right;">

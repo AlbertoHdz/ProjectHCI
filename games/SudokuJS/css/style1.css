@@ -1,0 +1,6 @@
+.btn-green{
+	background: linear-gradient(darkgreen,green);
+	box-shadow: 3px 1px 1px 0.5 gray|;
+	color:yellow;
+	border-radius: 4px;
+}

@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Sudoku JS</title>
-    <link rel="stylesheet" href="css/sudoku.css" media="screen"/>
+    <link rel="stylesheet" href="css/style1.css" media="screen"/>
     <link rel="stylesheet" href="js/jquery-ui-1.11.4/jquery-ui.min.css" media="screen"/>
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
@@ -259,10 +259,13 @@ t--;
 
 </head>
 <body>
+<script>
+    help();
+</script>
 <center>
 <form name=game>
 
-<input type=button value="Jugar de nuevo" onClick="playAgain();" style="float:right;">
+<input type=button class="btn-green" value="Jugar de nuevo" onClick="playAgain();" style="float:right;">
 &nbsp;&nbsp;
 <input type=button value="Ayuda" onClick="help();" style="float:right;">
 <table border=0>
@@ -287,9 +290,9 @@ t--;
 </td>
 <td>
 <table>
-<tr><td><input type=text size=5 name=you></td><td>Tu</td></tr>
-<tr><td><input type=text size=5 name=computer></td><td>Celular </td></tr>
-<tr><td><input type=text size=5 name=ties></td><td>Empates</td></tr>
+<tr><td><input type=text size=5 name=you disabled=""></td><td>Tu</td></tr>
+<tr><td><input type=text size=5 name=computer disabled=""></td><td>Celular </td></tr>
+<tr><td><input type=text size=5 name=ties disabled=""></td><td>Empates</td></tr>
 </table>
 </td>
 </table>
