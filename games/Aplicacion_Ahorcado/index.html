@@ -2,6 +2,8 @@
 <!-- saved from url=(0077)http://www.desarrolloweb.com/articulos/ejemplos/jquery/ahorcado/ahorcado.html -->
 <html><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15">
 	<title>Aplicación de Ahorcado</title>
+
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
 	<link type="text/css" href="jquery-ui-1.8.1.custom.css" rel="Stylesheet">      
 	<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="jquery-ui-1.8.1.custom.min.js"></script> 
@@ -87,7 +89,6 @@ $(document).ready(function(){
 					var caja = $('<div class="dialogletra" title="Has Ganado!!">Felicidades! has adivinado la palabra!!</div>');
 					caja.dialog({
 					modal: true,
-					width: 600,
 					buttons: {
 						"Ok": function(){
 							$(this).dialog("close");
@@ -104,7 +105,6 @@ $(document).ready(function(){
 					var caja = $('<div class="dialogletra" title="Has Perdido!!">Lo lamento!! la palabra era: ' + palabraEscogida + '</div>');
 					caja.dialog({
 					modal: true,
-					width: 600,
 					buttons: {
 						"Ok": function(){
 							$(this).dialog("close");
@@ -240,7 +240,13 @@ function dibujaAhorado(numerrores){
 	}
 }
 
+function Help(){
+	alert("Las letras estan en la parte de abajo. Pulsa letras que creas que completen la frase y ganar el juego. Buena Suerte!!!");
+}
 
+function NuevoJuego(){
+	window.reload();
+}
 </script>
 
 
@@ -257,9 +263,10 @@ body{
 	text-align: center;
 }
 .dialogletra{
-	font-size: 3em;
-	text-align: center;
-	padding-top: 15px;
+	/*font-size: 3em;*/
+	width: 60%;
+	/*text-align: center;
+	padding-top: 15px;*/
 }
 #botonesletras{
 	width: 330px;
@@ -287,13 +294,19 @@ body{
 </head>
 
 <body>
+<script type="text/javascript">
+	Help();
+</script>
+<div><button class="btn btn-primary" onclick="return Help()">Ayuda</button><button class="btn btn-success" onclick="return NuevoJuego()">Nuevo Juego</button></div>
 <div id="dibujoahorcado">
 	<canvas id="canvasahorcado" width="320" height="250">
 	El Ahorcado sólo funciona en navegadores que soporten Canvas. Actualízate a Firefox o Chrome, por poner dos posibilidades.
 	</canvas>
 </div>
 <div id="letras"><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span></div>
-<div id="botonesletras"><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">A</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">B</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">C</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">D</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">E</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">F</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">G</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">H</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">I</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">J</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">K</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">L</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">M</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">N</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Ñ</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">O</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">P</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Q</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">R</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">S</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">T</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">U</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">V</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">W</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">X</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Y</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Z</span></span></div>
+<div id="botonesletras"><!--
+<span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">A</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">B</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">C</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">D</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">E</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">F</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">G</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">H</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">I</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">J</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">K</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">L</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">M</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">N</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Ñ</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">O</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">P</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Q</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">R</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">S</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">T</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">U</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">V</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">W</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">X</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Y</span></span><span class="botonletra ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button" aria-disabled="false"><span class="ui-button-text">Z</span></span>-->
+</div>
 
 
 </body></html>
