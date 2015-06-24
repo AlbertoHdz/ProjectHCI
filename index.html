@@ -34,8 +34,8 @@
             }
 
             function MostrarAnimacion(){
-                var numrand = rand(30);
-                var str = "<p>Que te parece?</p>"+"<img src='gifs/im"+numrand+".mp4'>";
+                var numrand = rand(36);
+                var str = "<p>Que te parece?</p>"+"<img src='gifs/im"+numrand+".gif'>";
                  $("#HumorBody").html(str);
                
             }
@@ -46,11 +46,19 @@
         </script>
     </head>
     <body style="background: yellow url('img/fondo1.gif') no-repeat;background-size:100% 100%;">
+    <script type="text/javascript">
+      var str="";
+        for (var i = 1; i <=36; i++) {
+          str+="<img src='gifs/im"+i+".gif'><br>";
+        };
+        $("#HumorBody").html(str);
+    </script>
        <div id="main" >
            <div id="GameArea">
                <img src="gifs/bienverosa.gif" style="width:70%;">
               <div id="avatar" onclick="return MostrarAnimacion()">
                     <img src="img/dr3.gif" style="float:left;margin-left:6%;max-width:450px;margin-bottom:-2000px;" id="IMGPrincipal">
+
               </div>
 <div class="btn-group" style="float:left;">
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
