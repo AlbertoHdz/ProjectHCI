@@ -43,7 +43,7 @@ window.onload = function() {
             if(game.rootScene.age > game.fps * 20){
                 game.end(game.score, game.score + " 本のバナナを取りました!");
                 // 結果を表示 (スコア, 結果のテキストの順で)
-                alert("Tu puntaje es: "+puntaje);
+                alert("Tu puntaje es: "+puntaje+". \n Puedes Superarlo?");
             }
         });
 		///////////////////////7

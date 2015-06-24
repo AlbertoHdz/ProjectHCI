@@ -45,7 +45,7 @@ window.onload = function () {
      * ロードされたときの関数
      */
     game.onload = function () {
-        player = new Player(0, 152);
+        player = new Player(0, 152);  /// 0, 152
         enemies = new Array();
         /**
          * Background is black
@@ -58,9 +58,9 @@ window.onload = function () {
          */
         game.rootScene.addEventListener('enterframe', function () {
             if(rand(1000) < game.frame / 20 * Math.sin(game.frame / 100) + game.frame / 20 + 50) {
-                var y = rand(320);
+                var y = rand(screen.height);
                 var omega = y < 160 ? 0.01 : -0.01;
-                var enemy = new Enemy(320, y, omega);
+                var enemy = new Enemy(320, y, omega); ////320
                 enemy.key = game.frame;
                 enemies[game.frame] = enemy;
             }
@@ -283,7 +283,7 @@ var Enemy = enchant.Class.create(enchant.Sprite, {
          */
         this.addEventListener('enterframe', function () {
             this.move();
-            if(this.y > 320 || this.x > 320 || this.x < -this.width || this.y < -this.height) {
+            if(this.y > 350 || this.x > 350 || this.x < -this.width || this.y < -this.height) { //// 320, 320
                 this.remove();
             } else if(this.age % 10 == 0) {
                 var s = new EnemyShoot(this.x, this.y);
@@ -346,7 +346,7 @@ var Shoot = enchant.Class.create(enchant.Sprite, {
         this.addEventListener('enterframe', function () {
             this.x += this.moveSpeed * Math.cos(this.direction);
             this.y += this.moveSpeed * Math.sin(this.direction);
-            if(this.y > 320 || this.x > 320 || this.x < -this.width || this.y < -this.height) {
+            if(this.y > 350 || this.x > 350 || this.x < -this.width || this.y < -this.height) { //// >320  >320
                 this.remove();
             }
         });
@@ -370,7 +370,7 @@ var PlayerShoot = enchant.Class.create(Shoot, {
                 if(enemies[i].intersect(this)) {
                     this.remove();
                     enemies[i].remove();
-                    game.score += 100;
+                    game.score += 97;
                 }
             }
         });
@@ -385,6 +385,7 @@ var EnemyShoot = enchant.Class.create(Shoot, {
         this.addEventListener('enterframe', function () {
             if(player.within(this, 8)) {
                 game.end(game.score, "SCORE: " + game.score)
+                alert("Tu puntuación es: "+game.score+". \n Puedes Superarlo?");
             }
         });
     }
