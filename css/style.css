@@ -8,3 +8,7 @@ body{
 	/*max-width:200px;*/
 	margin-bottom:-2000px;
 }
+
+ul{
+	list-style: none;
+}

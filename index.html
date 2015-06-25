@@ -14,7 +14,7 @@
         <script type="text/javascript">
   /////////////////////////////////////////////
 
-        var Consejos = ["Hay quien cuida su cuerpo en gimnasio o buena alimentación. No olvides que tu espíritu tambien es importante","Las caricias estimulan el crecimiento de los bebes, en los adultos generan sinapsis en el cerebro. Es un beneficio durante toda la vida","Las Manzanas son muy eficientes para despertarse en las mañanas, mejor que la cafeína","El jugo de limón en ayunas, disuelto en una media taza de agua tibia, contribuye a reducir la acidez del cuerpo","Caminar esta recomendado para todas las personas. Aprovecha los lugares mas visitados y mas concurridos. Gana salud y protección","Regularmente come un plato colorido de vegetales, Mientras más colores, mas fitonutrientes que ayudan al cuerpo tendrás","No duermas con la TV encendida. El ruido y la luz de las imagenes no te permitiran el descanso que necesitas","No te obseciones con lo que dice la báscula, Lo importante es nutrirse de manera adecuada.","Los sueños no son solo para jóvenes. A cualquier edad, el espíritu reclama nuevos desafíos. Buscalos y hazlos tuyos","Si ha pasado mucho tiempo con una postura estática, realice ejercicios básicos para que su circulación sanguinea fluya. Haga breves estiramientos de brazos, levántese, camine. Su cuepo de lo agradecera.","Hay que dormir lo suficiente (7-8 horas). Si duermes mal, aumenta el riesgo de padecer enfermedades y disminuye tu calidad de vida. ¡Dormir bien es Salud!","Las personas más activas cerebralmente están mas protegidas contra el deterioro cognitivo. Mantente activo socialmente, lee libros y periodicos, disfruta la música y pintura, aprende a tocar un instrumento o nuevo idioma. ¡Dale trabajo a tu cerebro!","¡Mojate! El agua es fundamental para el cuerpo, para ayudar a lo que pierde como al realizar deportes. ¡Nunca esperes tener sed para tomar agua, 2 litros al dia y nadar una vez por semana tu cuerpo te lo agradecerá!","Mira al cielo diario, los ojos se resecan mucho por el uso de la computadora o el celular. Para evitar vista cansada y/o miopía toma breves descanso de estos cada 2 o 3 horas, mira al cielo y/o al horizonte,  parpadea con frecuencia.¡Ganarás salud Ocular!","Sonreir atrae las emociones positivas, como la alegría, el entusiasmo, la satisfacción o el orgullo. Sonrie más seguido."];
+        var Consejos = ["Hay quien cuida su cuerpo en gimnasio o buena alimentación. No olvides que tu espíritu tambien es importante","Las caricias estimulan el crecimiento de los bebes, en los adultos generan sinapsis en el cerebro. Es un beneficio durante toda la vida","Las Manzanas son muy eficientes para despertarse en las mañanas, mejor que la cafeína","El jugo de limón en ayunas, disuelto en una media taza de agua tibia, contribuye a reducir la acidez del cuerpo","Caminar esta recomendado para todas las personas. Aprovecha los lugares mas visitados y mas concurridos. Gana salud y protección","Regularmente come un plato colorido de vegetales, Mientras más colores, mas fitonutrientes que ayudan al cuerpo tendrás","No duermas con la TV encendida. El ruido y la luz de las imagenes no te permitiran el descanso que necesitas","No te obseciones con lo que dice la báscula, Lo importante es nutrirse de manera adecuada.","Los sueños no son solo para jóvenes. A cualquier edad, el espíritu reclama nuevos desafíos. Buscalos y hazlos tuyos","Si ha pasado mucho tiempo con una postura estática, realice ejercicios básicos para que su circulación sanguinea fluya. Haga breves estiramientos de brazos, levántese, camine. Su cuerpo de lo agradecera.","Hay que dormir lo suficiente (7-8 horas). Si duermes mal, aumenta el riesgo de padecer enfermedades y disminuye tu calidad de vida. ¡Dormir bien es Salud!","Las personas más activas cerebralmente están mas protegidas contra el deterioro cognitivo. Mantente activo socialmente, lee libros y periodicos, disfruta la música y pintura, aprende a tocar un instrumento o nuevo idioma. ¡Dale trabajo a tu cerebro!","¡Mojate! El agua es fundamental para el cuerpo, para ayudar a lo que pierde como al realizar deportes. ¡Nunca esperes tener sed para tomar agua, 2 litros al dia y nadar una vez por semana tu cuerpo te lo agradecerá!","Mira al cielo diario, los ojos se resecan mucho por el uso de la computadora o el celular. Para evitar vista cansada y/o miopía toma breves descanso de estos cada 2 o 3 horas, mira al cielo y/o al horizonte,  parpadea con frecuencia.¡Ganarás salud Ocular!","Sonreir atrae las emociones positivas, como la alegría, el entusiasmo, la satisfacción o el orgullo. Sonrie más seguido."];
         var recent=1;
             document.body.style.height = screen.height;
             document.body.style.width = screen.width;
@@ -35,7 +35,7 @@
 
             function MostrarAnimacion(){
                 var numrand = rand(36);
-                var str = "<p>Que te parece?</p>"+"<img src='gifs/im"+numrand+".gif'>";
+                var str = "<p>Si no hay movimiento. Gire el celular</p>"+"<img src='gifs/im"+numrand+".gif'>";
                  $("#HumorBody").html(str);
                
             }
@@ -45,7 +45,7 @@
             }
         </script>
     </head>
-    <body style="background: yellow url('img/fondo1.gif') no-repeat;background-size:100% 100%;">
+    <body style="background: yellow url('img/fondo1.gif') repeat-x;background-size:100% 100%;">
     <script type="text/javascript">
       var str="";
         for (var i = 1; i <=36; i++) {
@@ -61,15 +61,12 @@
 
               </div>
 <div class="btn-group" style="float:left;">
-                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-    Retos <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu" role="menu">
-    <li><a href="games/getbanana/index.html">Banana</a></li>
-    <li><a href="games/shooting/index.html">Shooting</a></li>
-    <li><a href="games/SudokuJS/index.html">Gato</a></li>
-    <li class="divider"></li>
-    <li><a href="games/ahorcado/index.html">Ahorcado</a></li>
+                <br><br>
+  <ul class="" role="menu">
+    <li><button class="btn-blue" onclick="window.location='games/getbanana/index.html'">Banana</button></li><br>
+    <li><button class="btn-red"  onclick="window.location='games/shooting/index.html'">Shooting</button></li><br>
+    <li><button class="btn-purple"  onclick="window.location='games/SudokuJS/index.html'">Gato</button></li><br>
+    <li><button class="btn-green"  onclick="window.location='games/ahorcado/index.html'">Ahorcado</button></li><br>
   </ul>
 </div>
 <div class="btn-group" style="float:right;">

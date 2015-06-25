@@ -113,3 +113,28 @@ h1 {
     animation:fade 3000ms infinite;
     -webkit-animation:fade 3000ms infinite;
 }
+
+ul{
+    list-style: none;
+}
+
+ul button{
+    width: 90px;
+    font-weight: bold;
+}
+
+.btn-blue{
+    background: rgba(127,191,223,0.9);
+}
+
+.btn-purple{
+    background: rgba(187,191,203,0.9);
+}
+
+.btn-red{
+    background: rgba(227,101,23,0.9);
+}
+
+.btn-green{
+    background: rgba(17,191,23,0.9);
+}
